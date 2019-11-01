@@ -19,7 +19,7 @@
  * //=> { a: { b: 1 } }
  * ```
 */
-declare function removeIfPrefix<T extends object | any[]>(obj: T, prefix?: string): T;
+declare function removeIfPrefix<T extends object | any[]>(obj: T, prefix?: string): Partial<T>;
 declare function removeIfPrefix<T>(obj: T, prefix?: string): T;
 
 export = removeIfPrefix;
