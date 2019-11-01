@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "remove-if-prefix",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Remove an item from an object or array of objects if the key starts with a specific character.",
+    "repository": "https://github.com/Richienb/remove-if-prefix.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,14 +11,19 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "filter",
+        "prefix"
+    ],
+    "dependencies": {
+        "remove-predicate": "^1.0.0"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.5.1",

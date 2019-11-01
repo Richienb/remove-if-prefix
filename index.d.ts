@@ -1,14 +1,25 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Remove an item from an object or array of objects if the key starts with a specific character.
+ * @param obj The object or array to handle.
+ * @param prefix The prefix to check for.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const removeIfPrefix = require("remove-if-prefix");
+ *
+ * removeIfPrefix(
+ *     {
+ *         a: {
+ *             _a: "a",
+ *             b: 1
+ *         },
+ *         _b: ["b"]
+ *     },
+ *     "_"
+ * );
+ * //=> { a: { b: 1 } }
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function removeIfPrefix<T extends object | any[]>(obj: T, prefix?: string): T;
+declare function removeIfPrefix<T>(obj: T, prefix?: string): T;
 
-export = theModule;
+export = removeIfPrefix;

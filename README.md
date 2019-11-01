@@ -1,41 +1,45 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Remove if prefix [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/remove-if-prefix/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/remove-if-prefix)
 
-My awesome module.
+Remove an item from an object or array of objects if the key starts with a specific character.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/remove-if-prefix.png)](https://npmjs.com/package/remove-if-prefix)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install remove-if-prefix
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const removeIfPrefix = require("remove-if-prefix");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+removeIfPrefix(
+    {
+        a: {
+            _a: "a",
+            b: 1
+        },
+        _b: ["b"]
+    },
+    "_"
+);
+//=> { a: { b: 1 } }
 ```
 
 ## API
 
-### theModule(input, options?)
+### removeIfPrefix(obj, prefix)
 
-#### input
+#### obj
+
+Type: `object or array`
+
+The object or array to handle.
+
+#### prefix
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The prefix to check for.

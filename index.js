@@ -1,7 +1,5 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const removePredicate = require("remove-predicate")
 
-    return `${input} & ${postfix}`
-}
+module.exports = (obj, prefix) => removePredicate(obj, (_value, key) => key.toString().startsWith(prefix))

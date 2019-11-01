@@ -1,13 +1,12 @@
 import test from "ava"
-import theModule from "."
+import removeIfPrefix from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    t.deepEqual(removeIfPrefix({
+        a: {
+            _a: "a",
+            b: 1,
+        },
+        _b: ["b"],
+    }, "_"), { a: { b: 1 } })
 })
