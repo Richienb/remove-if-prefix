@@ -1,6 +1,6 @@
 {
     "name": "remove-if-prefix",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Remove an item from an object or array of objects if the key starts with a specific character.",
     "repository": "https://github.com/Richienb/remove-if-prefix.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
